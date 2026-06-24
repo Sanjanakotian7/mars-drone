@@ -1,50 +1,96 @@
-## System Setup (Ubuntu 22.04)
+# 🚁 Mars Drone Simulation Project
 
-### 1. The One-Line ROS 2 Humble Setup (15 mins)
-Check for UTF-8 and set locales:
-```bash
-locale
-sudo apt update && sudo apt install locales -y
-sudo locale-gen en_US en_US.UTF-8
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
+A simulation-focused drone project developed as part of the ISRO ASCEND Drone Competition. This repository documents the project objectives, simulation activities, learning outcomes, and my contributions to the team's development efforts.
 
-##Install ROS 2 Humble (The "Fast" Way):
-sudo apt update && sudo apt upgrade -y
-sudo apt install software-properties-common -y
-sudo add-apt-repository universe
-sudo apt update && sudo apt install curl -y
-sudo curl -sSL [https://raw.githubusercontent.com/ros/rosdistro/master/ros.key](https://raw.githubusercontent.com/ros/rosdistro/master/ros.key) -o /usr/share/keyrings/ros-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] [http://packages.ros.org/ros2/ubuntu](http://packages.ros.org/ros2/ubuntu) $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-sudo apt update && sudo apt install ros-humble-desktop-full ros-dev-tools -y
+## Overview
 
+The Mars Drone project was developed to explore autonomous drone operations in Mars-like environments through simulation and mission planning. The project focused on evaluating drone behavior, navigation strategies, and system performance in challenging virtual terrains before physical implementation.
 
-##Setup the Shell:
+The initiative aimed to study how UAVs can be utilized for exploration, reconnaissance, and mission-specific operations in environments with limited accessibility and harsh operating conditions.
 
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+---
 
-###2. The PX4 & Gazebo Setup (30 mins)
+## Project Highlights
 
-##Clone the PX4 Autopilot firmware and run the setup script. It handles Gazebo automatically.
-git clone [https://github.com/PX4/PX4-Autopilot.git](https://github.com/PX4/PX4-Autopilot.git) --recursive
-bash PX4-Autopilot/Tools/setup/ubuntu.sh
+* Autonomous drone mission concept for Mars-like environments
+* Simulation-based performance evaluation
+* Mission planning and validation
+* Team-oriented aerospace engineering project
+* Participation in the ISRO ASCEND Drone Competition
 
-REBOOT YOUR LAPTOP HERE.
+---
 
-###3. Move Your Mars Arena (10 mins)
+## My Role
 
-    Copy your mars_final.glb and your mars_arena.sdf to the new Home folder.
+As a member of the project team, I contributed to the simulation and testing activities of the drone system.
 
-    Put the .glb in ~/PX4-Autopilot/Tools/simulation/gz/models/ (or wherever you prefer).
+Responsibilities included:
 
-###4. Launch the Simulation
+* Assisting in simulation setup and execution
+* Evaluating drone behavior in virtual environments
+* Supporting mission planning and scenario analysis
+* Participating in testing and validation activities
+* Collaborating with team members during system development
 
-##Open a fresh terminal and run this command to spawn the drone 0.5 meters in the air so it drops perfectly onto your rough arena.
-Bash
+---
 
-export PX4_GZ_MODEL_POSE="0,0,0.5,0,0,0"
-cd ~/PX4-Autopilot
-PX4_GZ_WORLD=mars_arena make px4_sitl gz_x500
+## Project Objectives
 
+* Simulate drone operations in Mars-like environments
+* Evaluate autonomous navigation strategies
+* Analyze mission performance in virtual scenarios
+* Support system validation before physical deployment
+* Explore UAV applications for planetary exploration missions
 
+---
+
+## Competition
+
+This project was developed as part of the ISRO ASCEND Drone Competition, which focuses on innovative aerospace and unmanned aerial vehicle technologies. The project emphasized simulation-driven design, mission analysis, and autonomous drone concepts for challenging operational environments.
+
+---
+
+## Technologies and Concepts
+
+* UAV Simulation
+* Autonomous Navigation
+* Mission Planning
+* Aerospace Systems
+* Robotics Concepts
+* System Testing and Validation
+* Virtual Environment Analysis
+
+---
+
+## Learning Outcomes
+
+Through this project, I gained experience in:
+
+* Drone simulation workflows
+* Autonomous systems concepts
+* Mission planning and analysis
+* Aerospace project development
+* Engineering teamwork and collaboration
+* System testing and validation methodologies
+
+---
+
+## Future Scope
+
+* Advanced autonomous navigation
+* Terrain mapping and analysis
+* Swarm drone coordination
+* Enhanced obstacle avoidance
+* Planetary exploration mission simulation
+
+---
+
+## Repository Note
+
+The original simulation assets and development files are not included in this repository. This repository serves as a project showcase and documentation of the work carried out during the competition.
+
+---
+
+## Acknowledgements
+
+This project was developed as part of a collaborative team effort for the ISRO ASCEND Drone Competition. The repository highlights my contributions and learning experience during the project.
